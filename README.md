@@ -1,4 +1,4 @@
-# Digital Map, with clusters of markers in Backbone 
+# Digital Map  withmarkers in Backbone.
 
 Simple Backbone App for a Digital Map. Extract from [roundabout.io](http://roundabout.io "Roundabout.io")
 
