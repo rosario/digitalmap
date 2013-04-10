@@ -1,0 +1,61 @@
+
+<div class="venue" id="venue_{{venue.id}}">
+    {{#if venue}}
+
+      <div class='venue-logo'>
+        <a href="{{venue.url}}" target="_blank">
+          
+        {{#if venue.logo_url}}
+          <img src="{{venue.logo_url}}">
+        {{else}}
+          <h4> {{ venue.name }} </h4>
+        {{/if}}
+        </a>
+        {{#if venue.url}}
+        <p><a href="{{venue.url}}" target="_blank">
+            {{truncate venue.url 30 "..."}}
+        </a></p>
+        {{/if}}
+        {{#if venue.address}}
+          <p class="address"> {{ venue.address }} </p>
+        {{else}}
+          <p id="no-address"> No address found. Add one? </p>
+          
+          <form id="form-address">
+            <input type="hidden" name="thing[tag]"></input>
+            <input type="hidden" name="thing[key]"></input>
+            <input id="address" type="text" name="thing[data]" placeholder="company address"></input>
+            <button id='submit' type='submit' class="btn btn-small btn-info"> Send </button>
+          </form>
+          <div id="confirmation">
+            <p> Thanks. We'll update the map! </p>
+              
+          </div>
+
+        {{/if}}
+      </div>
+      
+      {{#if venue.hiring }}
+      <div class="hiring-url">
+        <P><a href="{{ venue.hiringurl }}" target="_blank"> We are hiring!</a></p>
+      </div>
+      {{/if}}
+      <div class="product-description">
+        <p> {{ venue.product_desc }} </p>
+      </div>
+      <div class='links'>
+        {{#if venue.twitter_url}}
+          <p><a href="{{ venue.twitter_url }}" target="_blank">{{truncate venue.twitter_url 30 "..."}}</a></p>
+        {{/if}}
+        {{#if venue.angellist_url}}
+          <p><a href="{{ venue.angellist_url}}" target="_blank">{{truncate venue.angellist_url 30 "..."}}</a></p>
+        {{/if}}
+      </div>
+      
+      <div class='contact'>
+        <p> Is this your company? Do you have any edits? Email us: hello@roundabout.io </p>
+      </div>
+    {{else}}
+      <p> Empty </p>
+    {{/if}}
+</div>

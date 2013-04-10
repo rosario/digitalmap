@@ -1,0 +1,25 @@
+
+<div class="venues">
+  <ul>
+    {{#each venues}}
+      <li data-id='{{id}}'
+          data-name='{{name}}' 
+          data-lat='{{lat}}'
+          data-long='{{long}}'
+          data-address='{{address}}'
+          data-hiring='{{hiring}}'
+          data-hiringurl='{{hiringurl}}'
+          data-url='{{url}}'
+          data-logo_url='{{logo_url}}'
+          data-product_desc='{{product_desc}}'
+          data-twitter_url='{{twitter_url}}'
+          data-angellist_url='{{angellist_url}}'
+          data-url='{{url}}'>
+          {{name}} 
+          {{#if hiring}}
+            <span class="hiring"> We are hiring! </span>
+          {{/if}}
+      </li>
+    {{/each}}
+  <ul>
+</div>
